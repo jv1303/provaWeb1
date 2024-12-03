@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Página Inicial";
+}
+
+<h1>Lista de Pessoas</h1>
+
+<div>
+    <form method="post" asp-action="Adicionar">
+        <fieldset>
+            <legend>Adicionar pessoas</legend>
+            <input type="text" name="Nome" placeholder="Informe o nome"><br>
+            <input type="date" name="DataDeNascimento"><br>
+            <input type="text" name="Email" placeholder="Informe o email"><br>
+            <input type="text" name="Telefone" placeholder="Informe o telefone"><br>
+            <input type="submit" value="Adicionar">
+        </fieldset>
+    </form>
+</div><br>
+
+
+
+<div class="pessoas-section">
+        @foreach(var pessoa in Model)
+        {
+            <div class="pessoa-lista">
+                <ul>
+                    <li style="font-size: 22px;"><strong>Nome: </strong>@pessoa.Nome</li>
+                    <li><strong>Id: </strong>@pessoa.Id</li>
+                    <li><strong>Data de Nascimento: </strong>@pessoa.DataDeNascimento</li>
+                    <li><strong>Email: </strong>@pessoa.Email</li>
+                    <li><strong>Telefone: </strong>@pessoa.Telefone</li>
+                </ul>
+                <a href="Pessoas/Remover?Id=@pessoa.Id">
+                    <img src="~/img/delete.png" class="remover">
+                </a>
+            </div>
+        }
+</div>

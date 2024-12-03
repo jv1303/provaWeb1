@@ -1,0 +1,76 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.pessoas-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.remover {
+  width: 40px;
+} .remover:hover {
+  transition: 200ms ease-in-out;
+
+  width: 45px;
+}
+
+.pessoa-lista {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+  border: 1px solid;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  padding: 20px;
+} .pessoa-lista:hover {
+  box-shadow: 1px 1px 10px -3px #888888;
+}
+
+.pessoa-lista a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+}
+
+input {
+  margin: 5px;
+  width: 200px;
+}
+input[type="submit"] {
+  height: 40px;
+  width: 150px;
+}
+
+fieldset {
+  display: flex;
+  border: 1px solid;
+  align-items: center;
+  margin: 40px 0 20px 0;
+}
+
+legend {
+  margin-left: 10px;
+}
